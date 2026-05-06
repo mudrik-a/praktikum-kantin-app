@@ -5,12 +5,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# Ambil Nama & NIM dari Environment Variable (Identity Injection)
-nama_mhs = os.getenv('NAMA_USER', 'Nama Default') 
-nim_mhs = os.getenv('NIM_USER', 'NIM Default')
 
 kantin_data = {
-    "nama_kantin": f"Kantin - {nama_mhs} ({nim_mhs})",
+    "nama_kantin": "Kantin FPMIPA",
     "menu": ["Nasi Goreng", "Es Teh", "Gorengan"]
 }
 
